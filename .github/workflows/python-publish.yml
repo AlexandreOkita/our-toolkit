@@ -4,8 +4,11 @@
 name: Upload Python Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
+    path:
+      - ourtoolkit/**.py
 
 jobs:
   deploy:
@@ -22,13 +25,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install setuptools wheel twine
-    - name: Build and publish
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        python setup.py sdist
-        twine upload dist/*
+#    - name: Build and publish
+#      env:
+#        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+#        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+#      run: |
+#        python setup.py sdist
+#        twine upload dist/*
     - name: Update Version
       run: |
         python .github/scripts/update_version.py
