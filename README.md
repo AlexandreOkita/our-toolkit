@@ -23,6 +23,7 @@ Run the following commands:
 
 - `git status` - this will show you all your modifications 
 - `git add [FILE]` - this will stage the modified file. You can add all modified files in a directory using `git add .`
+- `git status` - check if all your modifications were staged 
 - `git commit -m "[MESSAGE]"` - this command will create your commit! Create it with a short description (usually under 50 characters) of your changes
 - `git push origin [YOUR-BRANCH-NAME]` - this command will send your modifications to your github forked repository
 
