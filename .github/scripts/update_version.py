@@ -12,3 +12,6 @@ lines[0] = f"VERSION = '{(version + 0.01):.2f}'\n"
 
 with open(current_path+'/../../setup.py', 'w') as f:
     f.writelines(lines)
+
+with open(current_path+'/version.env', 'w') as f:
+    f.writelines(f"VERSION={(version + 0.01):.2f}")
