@@ -1,13 +1,28 @@
 ## Implemented Functions
 
-### Flip a Coin
+### How to use the functions
+
+Just import the function from the our-toolkit module:
+```from ourtoolkit.MODULE-NAME import FUNCTION-NAME```
+
+
+## Summary - Modules
+
+- [Random Things](#random_things)
+- [Is Value](#is_value)
+---
+## random_things
+
+This module is focused in functions that play with the cold hands of destiny and fate (a.k.a. any random thing)
 
 Return two options with 50% of chance each.
 
-#### How to use it
+### Implemented functions:
+- [flip_coin](#flip_coin)
+#
+### flip_coin
 
-Just import the function from the our-toolkit module:
-```from ourtoolkit.flip_coin import flip_coin```
+Simulate the flip of a coin, returning True/False or option_a/option_b 
 
 #### Parameters
 
@@ -26,7 +41,7 @@ Set the string value for option_a, by default it uses "tails".
 #### Example
 
  ```python
-from ourtoolkit.flip_coin import flip_coin
+from ourtoolkit.random_things import flip_coin
 
 #Just return True or False with 50% chance each
 if flip_coin(): 
@@ -40,3 +55,30 @@ print(flip_coin(return_string=True))
 #Return custom options
 print(flip_coin(option_a="Win", option_b="Lose"))
 ```
+---
+
+## is_value
+
+### Implemented functions:
+- [is_zero](#is_zero)
+#
+### is_zero
+
+Check if something is zero
+
+#### Parameters
+
+<b>number</b>
+
+Number that will be compared with zero
+
+#### Example
+
+ ```python
+from ourtoolkit.is_value import is_zero
+
+if is_zero(0): 
+    print("It works!")
+else:
+    print("Something is strange here...")
+
