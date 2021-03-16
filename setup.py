@@ -1,4 +1,4 @@
-VERSION = '0.1'
+VERSION = '0.11'
 from distutils.core import setup
 setup(
   name = 'ourtoolkit',
@@ -9,7 +9,7 @@ setup(
   author = 'AlexandreOkita',
   author_email = 'xande.okita@gmail.com',
   url = 'https://github.com/AlexandreOkita/our-toolkit',
-  download_url = 'https://github.com/AlexandreOkita/our-toolkit/archive/0.1.tar.gz',
+  download_url = f'https://github.com/AlexandreOkita/our-toolkit/archive/{VERSION}.tar.gz',
   keywords = ['funny', 'useless', 'general', 'miscelaneous', "open", 'source'],
   install_requires=[
       ],
