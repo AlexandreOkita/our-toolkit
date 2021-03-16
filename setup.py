@@ -1,8 +1,9 @@
+VERSION = '0.1'
 from distutils.core import setup
 setup(
   name = 'ourtoolkit',
   packages = ['ourtoolkit'],
-  version = '0.1',
+  version = VERSION,
   license='MIT',
   description = 'A bundle with useless and funny modules',
   author = 'AlexandreOkita',
