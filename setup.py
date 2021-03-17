@@ -1,4 +1,4 @@
-VERSION = '0.11'
+VERSION = '0.12'
 from distutils.core import setup
 setup(
   name = 'ourtoolkit',
