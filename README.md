@@ -3,6 +3,12 @@ Open source python library focused on learning about how to contribute to open s
 
 ![our-toolkit](https://i.kym-cdn.com/entries/icons/original/000/034/467/Communist_Bugs_Bunny_Banner.jpg)
 
+## How to install
+
+Just install it as you would install any other python package with pip!
+
+`pip install ourtoolkit` or `pip3 install ourtoolkit`
+
 ## How to contribute
 
 ### First Step - Forking the Repository:
