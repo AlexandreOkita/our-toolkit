@@ -10,6 +10,7 @@ Just import the function from the our-toolkit module:
 
 - [Random Things](#random_things)
 - [Is Value](#is_value)
+- [Bogosort](#bogosort)
 ---
 ## random_things
 
@@ -81,4 +82,47 @@ if is_zero(0):
     print("It works!")
 else:
     print("Something is strange here...")
+```
 
+## bogosort
+
+The infamous worst sort - that works, eventually. It shuffles a list randomly
+until it is sorted.
+
+### Parameters
+
+* `list_` - a list to be sorted
+* `key` - optional, a callable that returns an item's sorting key
+
+### Usage
+
+#### Simple Sorting
+
+```python
+from ourtoolkit.bogosort import sort
+a = [0, 1, 10, 2]
+sort(a)
+
+# eventually this will give you [0, 1, 2, 10]
+```
+
+#### Keyed Sorting
+
+Thanks to Python's `sorted`'s `key` property [[docs](https://docs.python.org/3/library/functions.html#sorted)]
+we can actually customize our sorting strategy. For example:
+
+##### Sorting by Last Word
+
+```python
+l = ['mouse', 'cat', 'dog']
+sort(l, key=lambda x: x[-1])
+# eventually this will give you ['mouse', 'dog', 'cat']
+```
+
+##### Sorting by Word Length
+
+```python
+l = ['mouse', 'cat', 'dog']
+sort(l, key=lambda x: len(x))
+# eventually this will give you either ['dog', 'cat', 'mouse'] or ['cat', 'dog', 'mouse']
+```
