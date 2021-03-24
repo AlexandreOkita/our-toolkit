@@ -11,6 +11,7 @@ Just import the function from the our-toolkit module:
 - [Random Things](#random_things)
 - [Is Value](#is_value)
 - [Bogosort](#bogosort)
+- [Measure Time](#measure_time)
 ---
 ## random_things
 
@@ -125,4 +126,33 @@ sort(l, key=lambda x: x[-1])
 l = ['mouse', 'cat', 'dog']
 sort(l, key=lambda x: len(x))
 # eventually this will give you either ['dog', 'cat', 'mouse'] or ['cat', 'dog', 'mouse']
+```
+
+## measure_time
+
+Measure the time of your functions! The duration is calculated using ms
+
+### Parameters
+
+* `function` - your function reference (just call the function without the "( )")
+* `verbose` - optional, if True prints a message with the duration and the name of the function (default: True)
+* `*args and **kwargs` - optional, if your function needs to use parameters, you can pass them after the function
+
+### Usage
+
+
+```python
+n = int(input("Choose a big number: "))
+import random
+randomlist = []
+for i in range(0,n):
+    randomlist.append(random.randint(1,n))
+
+measure_time(randomlist.sort
+```
+
+#### Measuring functions with parameters
+
+```python
+measure_time(print, "Hello World", end='')
 ```
